@@ -8,6 +8,12 @@ A simple way to measure battery usage is to count the number of charge cycles.
 We need to classify their usage as 'high', 'medium', 'low'
 and count the number of batteries in each classification.
 
+Batteries are classified as follows:
+
+- charged less than 150 times: classified as `low`
+- charged between 150 and 649 times: classified as `medium`
+- charged 650 times or more: classified as `high`
+
 The code in this repository has an empty function and a test.
 Read the test to find out what's expected from the code.
 Of course, the test fails now, since the function isn't implemented.
