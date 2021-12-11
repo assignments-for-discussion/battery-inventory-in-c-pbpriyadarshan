@@ -23,4 +23,5 @@ Implement the function to classify correctly and pass the test.
 ## Evaluation Criteria
 
 - Readability: including variable names, code-flow, useage of comments only when necessary
-- Specification: including boundary conditions and add new tests
+- Improvements to existing code and tests
+- Precision: adding new tests (such as boundary conditions)
