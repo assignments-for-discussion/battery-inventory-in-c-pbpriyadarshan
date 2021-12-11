@@ -1,11 +1,14 @@
 # Bucketing Batteries
 
-The task is to count batteries by their usage.
+Let's say we have a bunch of batteries. 
+As batteries get used, they get charged and re-charged. In other words, they undergo charging-cycles.
+After many charge-cycles, batteries lose their capacity to store charge.
 
-## Battery Usage
+We want to group and count our batteries, according to the number of charge-cycles they have undergone.
 
-A simple way to measure battery usage is to count the number of charge cycles.
-We need to classify their usage as 'high', 'medium', 'low'
+## Battery Counting
+
+We need to classify the charge-cycles as 'high', 'medium', 'low'
 and count the number of batteries in each classification.
 
 Batteries are classified as follows:
@@ -14,11 +17,13 @@ Batteries are classified as follows:
 - charged between 150 and 649 times: classified as `medium`
 - charged 650 times or more: classified as `high`
 
-The code in this repository has an empty function and a test.
+The code in this repository has a function that needs to count the number of low, medium and high usage batteries. However, this function is not yet implemented.
+
+There is also a test function in the code.
 Read the test to find out what's expected from the code.
 Of course, the test fails now, since the function isn't implemented.
 
-Implement the function to classify correctly and pass the test.
+Implement the function to count correctly and pass the test.
 
 ## Evaluation Criteria
 
