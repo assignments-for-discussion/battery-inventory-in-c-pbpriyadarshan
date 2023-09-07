@@ -1,29 +1,29 @@
 #include <stdio.h>
 #include <assert.h>
 
-struct CountsByUsage {
-  int lowCount;
-  int mediumCount;
-  int highCount;
+struct CountsBySoH {
+  int healthy;
+  int exchange;
+  int failed;
 };
 
-struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
-  struct CountsByUsage counts = {0, 0, 0};
+struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBatteries) {
+  struct CountsBySoH counts = {0, 0, 0};
   return counts;
 }
 
-void testBucketingByNumberOfCycles() {
-  const int chargeCycleCounts[] = {100, 300, 500, 600, 900, 1000};
-  const int numberOfBatteries = sizeof(chargeCycleCounts) / sizeof(chargeCycleCounts[0]);
-  printf("Counting batteries by usage cycles...\n");
-  struct CountsByUsage counts = countBatteriesByUsage(chargeCycleCounts, numberOfBatteries);
-  assert(counts.lowCount == 2);
-  assert(counts.mediumCount == 3);
-  assert(counts.highCount == 1);
+void testBucketingByHealth() {
+  const int presentCapacities[] = {115, 118, 80, 95, 91, 77};
+  const int numberOfBatteries = sizeof(presentCapacities) / sizeof(presentCapacities[0]);
+  printf("Counting batteries by SoH...\n");
+  struct CountsBySoH counts = countBatteriesByHealth(presentCapacities, numberOfBatteries);
+  assert(counts.healthy == 2);
+  assert(counts.exchange == 3);
+  assert(counts.failed == 1);
   printf("Done counting :)\n");
 }
 
 int main() {
-  testBucketingByNumberOfCycles();
+  testBucketingByHealth();
   return 0;
 }
