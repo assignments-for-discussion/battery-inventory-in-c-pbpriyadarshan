@@ -13,7 +13,7 @@ struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBat
 }
 
 void testBucketingByHealth() {
-  const int presentCapacities[] = {115, 118, 80, 95, 91, 72};
+  const int presentCapacities[] = {113, 116, 80, 95, 92, 70};
   const int numberOfBatteries = sizeof(presentCapacities) / sizeof(presentCapacities[0]);
   printf("Counting batteries by SoH...\n");
   struct CountsBySoH counts = countBatteriesByHealth(presentCapacities, numberOfBatteries);
